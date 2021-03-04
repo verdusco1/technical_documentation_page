@@ -3,6 +3,20 @@ body {
     color: #f5f6f7 !important;
   }
 
+  @media screen and (max-width: 768px) {
+      #navbar-close {
+          display: none;
+      }
+
+      #navbar-open {
+          display: none;
+      }
+
+      .navbar {
+          display: block !important;
+      }
+  }
+
   @media screen and (min-width: 768px) {
     .navbar,
     .navbar .container-fluid {
@@ -13,28 +27,33 @@ body {
       align-items: center;
       text-align: center;
       flex-direction: column !important;
-      height: 100%;
-      width: 15vw;
+      width: 17vw;
+      z-index: 1;
+
     }
+
 
     .navbar-nav {
       height: 100%;
       display: flex;
-      justify-content: space-around;
+      justify-content: flex-start;
       flex-direction: column !important;
     }
 
-    #main-doc {
-      margin-left: 15vw;
-      padding: 1rem 0rem 1rem 1rem;
-      width: 70vw;
+    .navbar  {
+        height: 100%;
     }
 
-    header {
-      color: #f5f6f7;
-      letter-spacing: 1px;
-      font-weight: 900;
-      font-size: 20px;
+    .nav-link {
+        margin-top: 50px;
+    }
+
+    #main-doc {
+      margin-left: 17vw;
+      padding: 1rem 0rem 1rem 1rem;
+      width: 70vw;
+      z-index: 500;
+
     }
 
     .navbar-brand {
@@ -42,11 +61,12 @@ body {
     }
   }
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 767px) {
     .navbar {
       position: fixed;
       background-color: #0a0a23;
-      width: 100%;
+      width: 100% !important;
+      top: 0;
     }
 
     .nav-link {
@@ -58,6 +78,7 @@ body {
 
     #main-doc {
       padding: 5px;
+      margin-top: 75px;
     }
   }
 
@@ -65,6 +86,32 @@ body {
     background-color: #0a0a23;
     padding: 5px 0px 5px 5px;
   }
+
+
+header {
+    color: #f5f6f7;
+    letter-spacing: 1px;
+    font-weight: 900;
+    font-size: 20px;
+  }
+
+  .navbar-open-container {
+    color: #f5f6f7;
+    width: 15vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+}
+
+    #navbar-close {
+        padding: 20px 0px 0px 0px;
+        text-decoration: none;
+        /* transparent for issue with chrome */
+        color: transparent;
+        text-shadow: 0 0 0 rgb(233, 233, 233);
+    }
+
 
   /* table */
   td {

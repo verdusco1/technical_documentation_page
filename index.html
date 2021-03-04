@@ -16,6 +16,8 @@
           <span class="navbar-brand mb-0 h1">
             <header>Javascript <br>Notes</header>
           </span>
+          <a id="navbar-close" href="javascript:void(0)" class="closebtn" onclick="closeNav()">&#x2716;</a>
+
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -46,8 +48,11 @@
           </div>
         </div>
       </nav>
-
+      <div class="navbar-open-container">
+        <span id="navbar-open" style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+      </div>
       <main id="main-doc">
+          <h1>Javascript Basics</h1>
         <section id="variables" class="main-section">
           <header>Variables</header>
           <p>Variables are containers that store values. You start by declaring a variable with the var (less recommended, dive deeper for the explanation) or the let keyword, followed by the name you give to the variable:</p>
@@ -193,7 +198,24 @@
             <li>4</li>
             <li>5</li>
           </ol>
+          <p>All the notes used in this project were sourced from MDN Web Docs. Read about it
+              <a href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/JavaScript_basics"
+                 target="_blank"
+              >here</a>
+              .</p>
         </section>
       </main>
 </body>
+
+<script>
+    function openNav() {
+      document.getElementById("navbar").style.cssText = "width: 17vw; display: block;";
+
+    }
+
+    function closeNav() {
+      document.getElementById("navbar").style.cssText = "width: 0; display: none;";
+    }
+    </script>
+
 </html>
