@@ -87,6 +87,11 @@ body {
     padding: 5px 0px 5px 5px;
   }
 
+  .navbar {
+      /* hide sidenav by default */
+      display: none;
+  }
+
 
 header {
     color: #f5f6f7;
