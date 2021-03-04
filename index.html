@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Beginner's Notes for Javascript</title>
+</head>
+<body>
+    <nav id="nav-bar" class="navbar navbar-expand-md navbar-dark">
+        <div class="container-fluid">
+          <span class="navbar-brand mb-0 h1">Javascript <br>Notes</span>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a href="#variables" class="nav-link ">Variables</a>
+              </li>
+              <li class="nav-item">
+                <a href="#comments" class="nav-link">Comments</a>
+              </li>
+              <li class="nav-item">
+                <a href="#operators" class="nav-link">Operators</a>
+              </li>
+              <li class="nav-item">
+                <a href="#conditionals" class="nav-link">Conditionals</a>
+              </li>
+              <li class="nav-item">
+                <a href="#functions" class="nav-link">Functions</a>
+              </li>
+              <li class="nav-item">
+                <a href="#events" class="nav-link">Events</a>
+              </li>
+              <li class="nav-item">
+                <a href="#test" class="nav-link">Test</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <main id="main-doc">
+        <section id="variables" class="main-section">
+          <header>Variables</header>
+          <p>Variables are containers that store values. You start by declaring a variable with the var (less recommended, dive deeper for the explanation) or the let keyword, followed by the name you give to the variable:</p>
+          <pre class="code-block">let myVariable;</pre>
+          <p>After declaring a variable, you can give it a value:</p>
+          <pre class="code-block">myVariable = 'Bob';</pre>
+          <p>Also, you can do both these operations on the same line</p>
+          <pre class="code-block">let myVariable = 'Bob';</pre>
+          <p>You retrieve the value by calling the variable name:</p>
+          <pre class="code-block">myVariable;</pre>
+          <p>After assigning a value to a variable, you can change it later in the code:</p>
+          <pre class="code-block">let myVariable = 'Bob';
+      myVariable = 'Steve';</pre>
+          <p>Note that variables may hold values that have different data types:</p>
+          <table>
+            <thread>
+              <tr>
+                <th class="row-title" scope="row">Variable</th>
+                <th class="table-desc" scope="col">Explanation</th>
+                <th class="table-code" scope="col">Example</th>
+              </tr>
+            </thread>
+            <tbody>
+              <tr>
+                <th scope="row">String</th>
+                <td> This is a sequence of text known as a string. To signify that the value is a string, enclose it in single quote marks.</td>
+                <td>let myVariable = 'Bob';</td>
+              </tr>
+              <tr>
+                <th scope="row">Number</th>
+                <td>This is a number. Numbers don't have quotes around them.</td>
+                <td>let myVariable = 10;</td>
+              </tr>
+              <tr>
+                <th scope="row">Boolean</th>
+                <td>This is a True/False value. The words true and false are special keywords that don't need quote marks.</td>
+                <td>let myVariable = true;</td>
+              </tr>
+              <tr>
+                <th scope="row">Array</th>
+                <td> This is a structure that allows you to store multiple values in a single reference.</td>
+                <td> let myVariable = [1,'Bob','Steve',10];
+                  Refer to each member of the array like this:
+                  myVariable[0], myVariable[1], etc.</td>
+              </tr>
+              <tr>
+                <th scope="row">Object</th>
+                <td>This can be anything. Everything in JavaScript is an object and can be stored in a variable. Keep this in mind as you learn.</td>
+                <td>let myVariable =
+                    <br> document. querySelector('h1');
+                    <br>
+                  All of the above examples too.</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+        <section id="comments" class="main-section">
+          <header>Comments</header>
+          <p>Comments are snippets of text that can be added along with code. The browser ignores text marked as comments. You can write comments in JavaScript just as you can in CSS:</p>
+          <pre class="code-block">
+              <code>/*
+              Everything in between is a comment.
+              */</code>
+            </pre>
+          <p>If your comment contains no line breaks, it's an option to put it behind two slashes like this:
+          </p>
+          <pre class="code-block">
+              <code>// This is a comment</code>
+            </pre>
+        </section>
+        <section id="operators" class="main-section">
+          <header>Operators</header>
+          <p>An operator is a mathematical symbol that produces a result based on two values (or variables). In the following table, you can see some of the simplest operators, along with some examples to try in the JavaScript console.</p>
+        </section>
+        <section id="conditionals" class="main-section">
+          <header>Conditionals</header>
+          <p>Conditionals are code structures used to test if an expression returns true or not. A very common form of conditionals is the if ... else statement. For example:</p>
+          <pre class="code-block">
+              <code>let iceCream = 'chocolate';
+              if(iceCream === 'chocolate') {
+                alert('Yay, I love chocolate ice cream!');
+              } else {
+                alert('Awwww, but chocolate is my favorite...');
+              }</code>
+            </pre>
+          <p>The expression inside the if( ... ) is the test. This uses the identity operator (as described above) to compare the variable iceCream with the string chocolate to see if the two are equal. If this comparison returns true, the first block of code runs. If the comparison is not true, the second block of code—after the else statement—runs instead.</p>
+        </section>
+        <section id="functions" class="main-section">
+          <header>Functions</header>
+          <p>Functions are a way of packaging functionality that you wish to reuse. It's possible to define a body of code as a function that executes when you call the function name in your code. This is a good alternative to repeatedly writing the same code. You have already seen some uses of functions previously. For example:</p>
+          <pre class="code-block">
+              <code>let myVariable = document.querySelector('h1');</code>
+              </pre>
+          <pre class="code-block">
+                <code>alert('hello!');</code>
+              </pre>
+          <p>These functions, document.querySelector and alert, are built into the browser.</p>
+          <p>If you see something which looks like a variable name, but it's followed by parentheses— () —it is likely a function. Functions often take arguments: bits of data they need to do their job. Arguments go inside the parentheses, separated by commas if there is more than one argument.</p>
+          <p>For example, the alert() function makes a pop-up box appear inside the browser window, but we need to give it a string as an argument to tell the function what message to display.</p>
+          <p>You can also define your own functions. In the next example, we create a simple function which takes two numbers as arguments and multiplies them:</p>
+          <pre class="code-block">
+              <code>function multiply(num1,num2) {
+                let result = num1 * num2;
+                return result;
+              }</code>
+            </pre>
+          <p>Try running this in the console; then test with several arguments. For example:
+          </p>
+          <pre class="code-block">
+              <code>multiply(4, 7);
+              multiply(20, 20);
+              multiply(0.5, 3);</code>
+            </pre>
+        </section>
+        <section id="events" class="main-section">
+          <header>Events</header>
+          <p>Real interactivity on a website requires event handlers. These are code structures that listen for activity in the browser, and run code in response. The most obvious example is handling the click event, which is fired by the browser when you click on something with your mouse. To demonstrate this, enter the following into your console, then click on the current webpage:</p>
+          <pre class="code-block">
+              <code>document.querySelector('html').onclick = function() {
+                  alert('Ouch! Stop poking me!');
+              }</code>
+            </pre>
+          <p>There are many ways to attach an event handler to an element. Here we select the html element, setting its onclick handler property equal to an anonymous (i.e. nameless) function, which contains the code we want the click event to run.</p>
+          <p>Note that</p>
+          <pre class="code-block">
+              <code>document.querySelector('html').onclick = function() {};</code>
+            </pre>
+          <p>is equivalent to</p>
+          <pre class="code-block">
+              <code>let myHTML = document.querySelector('html');
+              myHTML.onclick = function() {};</code>
+            </pre>
+          <p>It's just shorter.</p>
+          <li>sadfa</li>
+        </section>
+        <section id="test" class="main-section">
+          <header>Test</header>
+          <p>A List</p>
+          <ol>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+          </ol>
+        </section>
+      </main>
+</body>
+</html>
